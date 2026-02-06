@@ -97,7 +97,7 @@ export default function Home() {
       style: answers.style || '모던',
     });
 
-    const message = `예상 견적이 나왔습니다!\n\n${formatPrice(estimate.min)} ~ ${formatPrice(estimate.max)}\n\n상담을 원하시면 연락처를 남겨주세요.`;
+    const message = `예상 견적이 나왔습니다!\n\n${formatPrice(estimate.min)} ~ ${formatPrice(estimate.max)}`;
     addBotMessage(message);
 
     setState((prev) => ({
