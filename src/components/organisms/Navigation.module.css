@@ -1,0 +1,43 @@
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.5rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    pointer-events: none;
+    /* Allow clicks through empty space */
+}
+
+.logo a {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: hsl(var(--foreground));
+    text-decoration: none;
+    pointer-events: auto;
+}
+
+.links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    pointer-events: auto;
+}
+
+.links a {
+    color: hsl(var(--muted-foreground));
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 200ms ease;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.links a:hover,
+.links a.active {
+    color: hsl(var(--foreground));
+}

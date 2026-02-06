@@ -1,0 +1,118 @@
+.hero {
+    position: relative;
+    height: 90vh;
+    /* Takes up most of the viewport */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: hsl(var(--background));
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120%;
+    /* Taller for parallax movement */
+    background-size: cover;
+    background-position: center;
+    will-change: transform;
+    z-index: 1;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.4),
+            hsl(var(--background)));
+    z-index: 2;
+}
+
+.content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    padding: 0 2rem;
+    max-width: 1000px;
+}
+
+.title {
+    font-size: 5rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+    letter-spacing: -0.05em;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    animation-delay: 0.2s;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 300;
+    max-width: 600px;
+    margin: 0 auto;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    animation-delay: 0.5s;
+}
+
+/* Interior Theme specific tweaks via CSS class composition */
+.interior .title {
+    font-family: var(--font-serif);
+    /* Example if we had a serif font */
+    color: #fff;
+}
+
+/* Architecture Theme specific tweaks */
+.architecture .title {
+    text-transform: uppercase;
+    color: #fff;
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Scroll indicator */
+.scrollIndicator {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    animation: bounce 2s infinite;
+    opacity: 0.7;
+}
+
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateX(-50%) translateY(0);
+    }
+
+    40% {
+        transform: translateX(-50%) translateY(-10px);
+    }
+
+    60% {
+        transform: translateX(-50%) translateY(-5px);
+    }
+}

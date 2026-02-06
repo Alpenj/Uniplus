@@ -1,0 +1,88 @@
+.container {
+    min-height: 100vh;
+    padding-top: 80px;
+    /* Space for fixed nav */
+    background-color: hsl(var(--background));
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    margin-bottom: 3rem;
+}
+
+.heroImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.content {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 2rem 4rem 2rem;
+}
+
+.header {
+    margin-bottom: 2rem;
+    border-bottom: 1px solid hsl(var(--border));
+    padding-bottom: 2rem;
+}
+
+.category {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: hwb(var(--primary) 20%);
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.title {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    line-height: 1.1;
+}
+
+.meta {
+    display: flex;
+    gap: 2rem;
+    color: hsl(var(--muted-foreground));
+    font-size: 0.95rem;
+}
+
+.description {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: hsl(var(--foreground));
+    opacity: 0.9;
+    margin-bottom: 3rem;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius);
+    object-fit: cover;
+}
+
+.backLink {
+    display: inline-block;
+    margin-bottom: 2rem;
+    color: hsl(var(--muted-foreground));
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+}
+
+.backLink:hover {
+    color: hsl(var(--foreground));
+}
