@@ -25,7 +25,7 @@ export interface ChatState {
 // 질문 템플릿 정의
 export const QUESTIONS = {
     space: {
-        text: '안녕하세요! UNIPLUS입니다.\n어떤 공간을 리모델링하시나요?',
+        text: '안녕하세요! HiveHash입니다.\n어떤 공간을 리모델링하시나요?',
         options: ['거실', '주방', '욕실', '침실', '전체 리모델링'],
     },
     area: {

@@ -5,9 +5,11 @@ import './globals.css';
 const inter = Inter({ subsets: ['latin'], variable: '--font-sans' });
 
 export const metadata: Metadata = {
-  title: 'UNIPLUS - 투명한 인테리어 컨설팅',
+  title: 'HiveHash - 투명한 인테리어 컨설팅',
   description: '신뢰 기반 인테리어·건축 SCM 플랫폼',
 };
+
+import { DataProvider } from '@/lib/DataContext'; // Import
 
 export default function RootLayout({
   children,
@@ -16,7 +18,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <DataProvider>
+          {children}
+        </DataProvider>
+      </body>
     </html>
   );
 }

@@ -21,7 +21,7 @@ export default function ChatContainer({ messages, children }: ChatContainerProps
     return (
         <div className={styles.container}>
             <div className={styles.header}>
-                <div className={styles.logo}>UNIPLUS</div>
+                <div className={styles.logo}>HiveHash</div>
                 <div className={styles.subtitle}>투명한 인테리어 컨설팅</div>
             </div>
 
