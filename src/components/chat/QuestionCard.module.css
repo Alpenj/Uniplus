@@ -1,0 +1,30 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.option {
+    background: white;
+    border: 2px solid #E0E0E0;
+    border-radius: 12px;
+    padding: 14px 18px;
+    font-size: 15px;
+    color: #2D2D2D;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: left;
+    font-weight: 500;
+}
+
+.option:hover {
+    background: #F8F8F8;
+    border-color: #00C896;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 200, 150, 0.15);
+}
+
+.option:active {
+    transform: translateY(0);
+}

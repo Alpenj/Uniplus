@@ -1,12 +1,12 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import '@/styles/globals.css';
+import './globals.css';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-sans' });
 
 export const metadata: Metadata = {
-  title: 'Interior & Architecture',
-  description: 'Premium Interior Design & Architecture Solutions',
+  title: 'UNIPLUS - 투명한 인테리어 컨설팅',
+  description: '신뢰 기반 인테리어·건축 SCM 플랫폼',
 };
 
 export default function RootLayout({
